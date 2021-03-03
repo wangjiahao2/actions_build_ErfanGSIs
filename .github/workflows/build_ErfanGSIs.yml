@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: 
-  ROM_NAME: 
+  ROM_URL: http://download.h2os.com/OnePlus5/OPEN/OnePlus5Hydrogen_23_OTA_054_all_1906241435_a7d827c332c14e09.zip
+  ROM_NAME: OxygenOS
   TZ: Asia/Shanghai
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME e -ab
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME e -a
        
        - name: Zip GSI  
          run: |
